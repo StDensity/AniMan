@@ -200,7 +200,7 @@
     { name: "Fall", value: "FALL" },
   ];
 
-export const AniMangOptions = [
+export const airingOptions = [
     { name: "Releasing", value: "RELEASING" },
     { name: "Not Yet Released", value: "NOT_YET_RELEASED" },
     { name: "Finished", value: "FINISHED" },

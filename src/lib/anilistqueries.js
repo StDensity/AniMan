@@ -31,8 +31,8 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAniMangEpisode {
-                AniMangAt
+            nextAiringEpisode {
+                airingAt
                 episode
               }
               seasonYear
@@ -86,8 +86,8 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAniMangEpisode {
-                AniMangAt
+            nextAiringEpisode {
+                airingAt
                 episode
               }
               seasonYear
@@ -139,8 +139,8 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAniMangEpisode {
-                AniMangAt
+            nextAiringEpisode {
+                airingAt
                 episode
               }
               seasonYear
@@ -189,8 +189,8 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAniMangEpisode {
-                AniMangAt
+            nextAiringEpisode {
+                airingAt
                 episode
               }
               seasonYear
@@ -237,8 +237,8 @@ query ($id: Int) {
       averageScore
       popularity
       countryOfOrigin
-      nextAniMangEpisode {
-          AniMangAt
+      nextAiringEpisode {
+          airingAt
           episode
         }
         seasonYear
@@ -301,9 +301,9 @@ query ($id: Int) {
                 episodes
                 status
                 format
-                nextAniMangEpisode {
-                  AniMangAt
-                  timeUntilAniMang
+                nextAiringEpisode {
+                  airingAt
+                  timeUntilAiring
                   episode
                 }
             }
@@ -394,9 +394,9 @@ query ($page: Int = 1, $id: Int, $type: MediaType, $search: String, $format: [Me
       isAdult
       averageScore
       popularity
-      nextAniMangEpisode {
-        AniMangAt
-        timeUntilAniMang
+      nextAiringEpisode {
+        airingAt
+        timeUntilAiring
         episode
       }
       mediaListEntry {
@@ -418,7 +418,7 @@ export const notifications = `query ($page: Int) {
       hasNextPage
     }
     notifications(resetNotificationCount: true) {
-			... on AniMangNotification {
+			... on AiringNotification {
 				id
 				type 
 				animeId
@@ -517,9 +517,9 @@ export const playeranimeinfo = `query ($id: Int) {
       extraLarge
       color
     }
-    nextAniMangEpisode {
-      AniMangAt
-      timeUntilAniMang
+    nextAiringEpisode {
+      airingAt
+      timeUntilAiring
       episode
     }
     recommendations {
@@ -536,7 +536,7 @@ export const playeranimeinfo = `query ($id: Int) {
           episodes
           status
           format
-          nextAniMangEpisode {
+          nextAiringEpisode {
             episode
           }
         }
@@ -684,10 +684,10 @@ query($page: Int, $perPage: Int, $from: Int, $to: Int){
     pageInfo{
       hasNextPage
     },
-    AniMangSchedules(AniMangAt_greater: $from, AniMangAt_lesser: $to){
+    airingSchedules(airingAt_greater: $from, airingAt_lesser: $to){
       episode,
-      timeUntilAniMang,
-      AniMangAt,
+      timeUntilAiring,
+      airingAt,
       media{
         title
         coverImage{

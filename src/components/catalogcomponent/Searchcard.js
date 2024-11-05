@@ -9,7 +9,7 @@ import UseDebounce from '@/utils/UseDebounce';
 import { useTitle } from '@/lib/store';
 import { useStore } from 'zustand';
 
-function Searchcard({ searchvalue, selectedYear, seasonvalue, formatvalue, genrevalue, sortbyvalue, AniMangvalue }) {
+function Searchcard({ searchvalue, selectedYear, seasonvalue, formatvalue, genrevalue, sortbyvalue, airingvalue }) {
     const animetitle = useStore(useTitle, (state) => state.animetitle);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchdata, setsearchdata] = useState(null);
@@ -31,7 +31,7 @@ function Searchcard({ searchvalue, selectedYear, seasonvalue, formatvalue, genre
             }
         };
         fetchsearch();
-    }, [debouncedSearch, selectedYear, seasonvalue, formatvalue, genrevalue, sortbyvalue, currentPage, AniMangvalue]);
+    }, [debouncedSearch, selectedYear, seasonvalue, formatvalue, genrevalue, sortbyvalue, currentPage, airingvalue]);
 
     return (
         <div className={styles.searchcard}>
@@ -78,7 +78,7 @@ function Searchcard({ searchvalue, selectedYear, seasonvalue, formatvalue, genre
                                             {item.status}
                                         </span>
                                         <span className='text-[10px]'>&#8226;</span>
-                                        <span>Ep {item.episodes || item?.nextAniMangEpisode?.episode-1 || '?'}</span>
+                                        <span>Ep {item.episodes || item?.nextAiringEpisode?.episode-1 || '?'}</span>
                                     </div>
                                 </div>
                                 <span className={styles.cardtitle}> <span className={`aspect-square w-2 h-2 inline-block mr-1 rounded-full ${item.status === "NOT_YET_RELEASED" ? 'bg-red-500' : item.status === 'RELEASING' ? 'bg-green-500' : 'hidden'} xl:hidden`}></span>{item.title[animetitle] || item.title.romaji}</span>

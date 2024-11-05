@@ -105,7 +105,7 @@ function AnimeDetailsTop({ data, list, session, setList, url }) {
                         </div>
                         <div className='mt-2 sm:mt-20 md:px-[5%] px-[2%] mb-2'>
                           <Addtolist session={session} setList={setList} list={list}
-                            id={data?.id} eplength={data?.episodes || data?.nextAniMangEpisode?.episode - 1 || 24} Handlelist={Handlelist} />
+                            id={data?.id} eplength={data?.episodes || data?.nextAiringEpisode?.episode - 1 || 24} Handlelist={Handlelist} />
                         </div>
                       </ModalBody>
                     </>

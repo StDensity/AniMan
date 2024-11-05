@@ -1,11 +1,11 @@
 version: "3.3"
 services:
-  AniMan:
-    container_name: AniMan
+  airin:
+    container_name: airin
     restart: always
     ports:
       - 3000:3000
-    image: ghcr.io/Noname968/AniMan:latest
+    image: ghcr.io/Noname968/airin:latest
     links:
       - redis:redis
       - consumet:consumet

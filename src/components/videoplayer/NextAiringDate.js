@@ -1,16 +1,16 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 
-function NextAniMangDate({ nextAniMangEpisode }) {
+function NextAiringDate({ nextAiringEpisode }) {
   const [timeLeft, setTimeLeft] = useState(null);
 
   useEffect(() => {
-    if (!nextAniMangEpisode) {
+    if (!nextAiringEpisode) {
       return;
     }
 
     const intervalId = setInterval(() => {
-      const timeDifference = nextAniMangEpisode.AniMangAt * 1000 - Date.now();
+      const timeDifference = nextAiringEpisode.airingAt * 1000 - Date.now();
 
       if (timeDifference <= 0) {
         clearInterval(intervalId);
@@ -26,12 +26,12 @@ function NextAniMangDate({ nextAniMangEpisode }) {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [nextAniMangEpisode]);
+  }, [nextAiringEpisode]);
 
-  if (!nextAniMangEpisode || timeLeft === null) {
+  if (!nextAiringEpisode || timeLeft === null) {
     return (
     <div className='hidden w-[98%] mx-auto lg:w-full md:flex xl:max-w-[96.5%] my-5 text-[13px] bg-[#18181B] py-2 rounded-[8px] text-center text-[#ffffffb2]  flex-row gap-1 items-center justify-center'>
-       The next episode will be AniMang Shortly... 
+       The next episode will be Airing Shortly... 
     </div>
     )}
 
@@ -47,4 +47,4 @@ function NextAniMangDate({ nextAniMangEpisode }) {
   );
 }
 
-export default NextAniMangDate;
+export default NextAiringDate;

@@ -100,7 +100,7 @@ export default function Changelogs() {
                                         <div className="flex gap-3 items-center">
                                             {/* Github Icon */}
                                             <Link
-                                                href="https://github.com/Noname968/AniMan"
+                                                href="https://github.com/Noname968/airin"
                                                 target="_blank"
                                                 className="w-5 h-5 hover:opacity-75"
                                             >
@@ -130,7 +130,7 @@ export default function Changelogs() {
                                             </Link>
                                             {/* Discord Icon */}
                                             <Link
-                                                href="https://discord.gg/ztTSD33yhQ"
+                                                href="https://discord.gg/QnbFaudJNf"
                                                 target="_blank"
                                                 className="w-6 h-6 hover:opacity-75"
                                             >

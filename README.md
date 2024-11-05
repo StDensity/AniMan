@@ -1,9 +1,9 @@
 <div align="center">
   <a href="https://Aniplaynow.live" target="_blank">
-    <img src="https://github.com/Noname968/AniMan/blob/c39875dc6e1bc2db9d8371574a9ab3ed95ff3b93/public/icon-512x512.png" alt="Logo" width="140" height="140">
+    <img src="https://github.com/Noname968/airin/blob/c39875dc6e1bc2db9d8371574a9ab3ed95ff3b93/public/icon-512x512.png" alt="Logo" width="140" height="140">
   </a>
 
-  <h2 align="center">AniMan</h3>
+  <h2 align="center">Airin</h3>
 
   <p align="center">
     An open-source Anime streaming site built with Nextjs 14
@@ -48,7 +48,7 @@ Enjoy ad-free streaming and seamless progress tracking with AniList integration,
     - [ ] Mangadex
     - [ ] And some more
 
-See the [open issues](https://github.com/Noname968/AniMan/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Noname968/airin/issues) for a full list of proposed features (and known issues).
 
 
 ## Environment Variables
@@ -88,12 +88,12 @@ MONGODB_URI="Your Mongodb connection String"
 
 Clone the project
 ```bash
-  git clone https://github.com/Noname968/AniMan.git
+  git clone https://github.com/Noname968/airin.git
 ```
 
 Go to the project directory
 ```bash
-  cd AniMan
+  cd airin
 ```
 
 Install dependencies
@@ -116,29 +116,29 @@ Move the .env file somewhere it won't bother you (optional)
 Run the image:
 ```bash
 docker run -d -it \
---name AniMan \
+--name airin \
 -p 3000:3000 \
 -v <path_of_env_file>/.env:/usr/src/app/.env \
-ghcr.io/Noname968/AniMan:latest
+ghcr.io/Noname968/airin:latest
 ```
 
 For Docker Compose:
 ```yaml
 version: "3.3"
 services:
-  AniMan:
-    container_name: AniMan
+  airin:
+    container_name: airin
     ports:
       - 3000:3000
     volumes:
       - <path_of_env_file>/.env:/usr/src/app/.env
-    image: ghcr.io/Noname968/AniMan:latest
+    image: ghcr.io/Noname968/airin:latest
 ```
 
 For at full stack deploy (db, redis, consumet api)
-See [docker-compose.yml](https://github.com/Noname968/AniMan/blob/master/docker-compose.yml)
+See [docker-compose.yml](https://github.com/Noname968/airin/blob/master/docker-compose.yml)
 
-Access AniMan at ``http://localhost:3000``
+Access Airin at ``http://localhost:3000``
 
 ## Self-Hosting Notice
 
@@ -163,8 +163,8 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/Noname968/AniMan](https://github.com/Noname968/AniMan)
+Project Link: [https://github.com/Noname968/airin](https://github.com/Noname968/airin)
 
-Discord Server: [https://discord.gg/ztTSD33yhQ](https://discord.gg/ztTSD33yhQ)
+Discord Server: [https://discord.gg/QnbFaudJNf](https://discord.gg/QnbFaudJNf)
 
 For any queries you can DM me on Discord `harsha9680`.
