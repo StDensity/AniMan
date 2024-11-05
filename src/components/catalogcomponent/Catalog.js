@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/Catalog.module.css';
 import { Accordion, AccordionItem, Select, SelectItem, RadioGroup, Radio, Input } from "@nextui-org/react";
-import { seasonOptions, genreOptions, tagsOptions, formatOptions, yearOptions, sortbyOptions, airingOptions } from './options';
+import { seasonOptions, genreOptions, tagsOptions, formatOptions, yearOptions, sortbyOptions, AniMangOptions } from './options';
 import { Combobox, Transition } from '@headlessui/react'
 import Searchcard from './Searchcard';
 
@@ -14,7 +14,7 @@ function Catalog({ searchParams }) {
     const [genrevalue, setGenrevalue] = useState([])
     const [query, setQuery] = useState('')
     const [sortbyvalue, setSortbyvalue] = useState(null);
-    // const [airingvalue, setAiringvalue] = useState(null);
+    // const [AniMangvalue, setAniMangvalue] = useState(null);
     const [searchvalue, setSearchvalue] = useState("");
     const [showTopBottom, setShowTopBottom] = useState(true);
 
@@ -237,7 +237,7 @@ function Catalog({ searchParams }) {
                             </svg>
                         </button>
                         {/* <div className={styles.catalogsort}>
-                        <h3 className={styles.searchlabel}>Airing Status</h3>
+                        <h3 className={styles.searchlabel}>AniMang Status</h3>
                         <Select
                             labelPlacement={"outside"}
                             label=""
@@ -245,9 +245,9 @@ function Catalog({ searchParams }) {
                             placeholder="Select Status"
                             selectedKeys={sortbyvalue}
                             className="max-w-xs"
-                            onSelectionChange={setAiringvalue}
+                            onSelectionChange={setAniMangvalue}
                         >
-                            {airingOptions.map((item) => (
+                            {AniMangOptions.map((item) => (
                                 <SelectItem key={item.value} value={item.value}>
                                     {item.name}
                                 </SelectItem>

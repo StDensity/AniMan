@@ -63,7 +63,7 @@ function MediaCard({ anime, session }) {
                                     </div>
                                     <div className='mt-2 sm:mt-20 md:px-[5%] px-[2%] mb-2'>
                                         <Addtolist session={session} setList={setList} list={list}
-                                            id={anime?.mediaId} eplength={anime?.media?.episodes || anime?.media?.nextAiringEpisode?.episode - 1 || 24} Handlelist={Handlelist} />
+                                            id={anime?.mediaId} eplength={anime?.media?.episodes || anime?.media?.nextAniMangEpisode?.episode - 1 || 24} Handlelist={Handlelist} />
                                     </div>
                                 </ModalBody>
                             </>

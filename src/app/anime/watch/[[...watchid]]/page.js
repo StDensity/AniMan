@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimeInfoAnilist } from '@/lib/Anilistfunctions'
-import NextAiringDate from "@/components/videoplayer/NextAiringDate";
+import NextAniMangDate from "@/components/videoplayer/NextAniMangDate";
 import PlayerAnimeCard from "@/components/videoplayer/PlayerAnimeCard";
 import Navbarcomponent from "@/components/navbar/Navbar";
 import PlayerComponent from "@/components/videoplayer/PlayerComponent";
@@ -25,7 +25,7 @@ async function getInfo(id) {
       return JSON.parse(cachedData);
     } else {
       const data = await AnimeInfoAnilist(id);
-      const cacheTime = data?.nextAiringEpisode?.episode ? 60 * 60 * 2 : 60 * 60 * 24 * 45;
+      const cacheTime = data?.nextAniMangEpisode?.episode ? 60 * 60 * 2 : 60 * 60 * 24 * 45;
       if (redis && data !== null && data) {
         await redis.set(`info:${id}`, JSON.stringify(data), "EX", cacheTime);
       }
@@ -90,7 +90,7 @@ async function AnimeWatch({ params, searchParams }) {
         <div className="flex-grow w-full h-full">
           <PlayerComponent id={id} epId={epId} provider={provider} epNum={epNum} data={data} subdub={subdub} session={session} savedep={savedep}/>
           {data?.status === 'RELEASING' &&
-            <NextAiringDate nextAiringEpisode={data?.nextAiringEpisode} />
+            <NextAniMangDate nextAniMangEpisode={data?.nextAniMangEpisode} />
           }
         </div>
         <div className="h-full lg:flex lg:flex-col md:max-lg:w-full gap-10">

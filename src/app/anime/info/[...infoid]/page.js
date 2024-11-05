@@ -24,7 +24,7 @@ async function getInfo(id) {
       return JSON.parse(cachedData);
     } else {
       const data = await AnimeInfoAnilist(id);
-      const cacheTime = data?.nextAiringEpisode?.episode ? 60 * 60 * 2 : 60 * 60 * 24 * 45;
+      const cacheTime = data?.nextAniMangEpisode?.episode ? 60 * 60 * 2 : 60 * 60 * 24 * 45;
       if (redis && data !== null && data) {
         await redis.set(`info:${id}`, JSON.stringify(data), "EX", cacheTime);
       }

@@ -48,7 +48,7 @@ function ItemContent({ anime, cardid }) {
                     {cardid === 'Recent Episodes' ? (
                         <span>Ep {anime?.totalEpisodes || anime?.currentEpisode || '?'}</span>
                     ) : (
-                        <span>Ep {anime?.episodes || anime?.nextAiringEpisode?.episode - 1 || '?'}</span>
+                        <span>Ep {anime?.episodes || anime?.nextAniMangEpisode?.episode - 1 || '?'}</span>
                     )}
                 </div>
             </div>
