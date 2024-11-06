@@ -163,8 +163,4 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/Noname968/airin](https://github.com/Noname968/airin)
-
-Discord Server: [https://discord.gg/QnbFaudJNf](https://discord.gg/QnbFaudJNf)
-
-For any queries you can DM me on Discord `harsha9680`.
+Discord Server: [https://discord.gg/ztTSD33yhQ](https://discord.gg/ztTSD33yhQ)
