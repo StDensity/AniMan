@@ -45,7 +45,7 @@ function Footer() {
                     <div className="lg:flex lg:justify-between">
                         <div class="mb-6 lg:mb-0">
                             <Link class="flex items-center w-fit" href="/">
-                                <p class="Airin self-center !text-4xl tracking-wider font-medium whitespace-nowrap dark:text-white">Airin</p>
+                                <p class="Animan self-center !text-4xl tracking-wider font-medium whitespace-nowrap dark:text-white">Animan</p>
                                 </Link>
                             <p class="lg:text-[0.8rem] text-[0.7rem] text-[#ffffffb2] lg:w-[520px]">
                                 This site does not store any files on our server, we are linked to the media which is hosted on 3rd party services.
@@ -80,7 +80,7 @@ function Footer() {
                 </div>
                 <div className='bg-tersier border-t border-white/5 mt-2'></div>
                 <div className="mx-auto w-full lg:max-w-[83%] lg:flex lg:items-center lg:justify-between lg:text-[0.8rem] text-[0.7rem] text-[#ffffffb2] py-3">
-                    <span className="sm:text-center ms-5 lg:ms-0">© {year} <Link href="/" className="hover:text-white">Airin™</Link> | Made by <span className="font-bold" >MatrixSols</span>
+                    <span className="sm:text-center ms-5 lg:ms-0">© {year} <Link href="/" className="hover:text-white">Animan™</Link> | Made by <span className="font-bold" >MatrixSols</span>
                     </span>
                     <div className="flex mt-4 lg:justify-center lg:mt-0">
                         <Link href="https://discord.gg/ztTSD33yhQ" target="_blank" className=" hover:text-gray-900 dark:hover:text-white ms-5">
