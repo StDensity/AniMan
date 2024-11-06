@@ -73,9 +73,6 @@ function Footer() {
                                     <li>
                                         <Link href="/dmca" className="hover:text-white"> DMCA</Link>
                                     </li>
-                                    <li>
-                                        <Link href="https://ko-fi.com/luckyhv" target='_blank' className="hover:text-white !font-semibold !text-[0.8rem]">Donate</Link>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -83,7 +80,7 @@ function Footer() {
                 </div>
                 <div className='bg-tersier border-t border-white/5 mt-2'></div>
                 <div className="mx-auto w-full lg:max-w-[83%] lg:flex lg:items-center lg:justify-between lg:text-[0.8rem] text-[0.7rem] text-[#ffffffb2] py-3">
-                    <span className="sm:text-center ms-5 lg:ms-0">© {year} <Link href="/" className="hover:text-white">Airin™</Link> | Made by <span className="font-bold" >Luckyhv</span>
+                    <span className="sm:text-center ms-5 lg:ms-0">© {year} <Link href="/" className="hover:text-white">Airin™</Link> | Made by <span className="font-bold" >MatrixSols</span>
                     </span>
                     <div className="flex mt-4 lg:justify-center lg:mt-0">
                         <Link href="https://discord.gg/ztTSD33yhQ" target="_blank" className=" hover:text-gray-900 dark:hover:text-white ms-5">
