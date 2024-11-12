@@ -37,6 +37,7 @@ import {
   SeekBackward10Icon,
   ChromecastIcon,
   AirPlayIcon,
+  DownloadIcon,
 } from "@vidstack/react/icons";
 import { useRouter } from "next-nprogress-bar";
 
@@ -384,40 +385,40 @@ export function AirPlay({ tooltipPlacement, offset }: MediaButtonProps) {
   );
 }
 
-// export function Download({
-//   tooltipPlacement,
-//   offset,
-//   groupedEp
-// }: MediaButtonProps) {
-//   const router = useRouter();
-// const nowPlaying = useStore(useNowPlaying, (state) => state.nowPlaying);
-// const dataInfo = useStore(useDataInfo, (state) => state.dataInfo);
-//   function handleDownload() {
-//     router.push(
-//       `${nowPlaying.download}`
-//     );
-//   }
+export function Download({
+  tooltipPlacement,
+  offset,
+  groupedEp
+}: MediaButtonProps) {
+  const router = useRouter();
+const nowPlaying = useStore(useNowPlaying, (state) => state.nowPlaying);
+const dataInfo = useStore(useDataInfo, (state) => state.dataInfo);
+  function handleDownload() {
+    router.push(
+      `${nowPlaying.download}`
+    );
+  }
 
-//   return (
-//     nowPlaying?.download && (
-//       <Tooltip.Root>
-//         <Tooltip.Trigger asChild>
-//           <div
-//             onClick={handleDownload}
-//             onTouchEnd={handleDownload}
-//             className={`play-button ${buttonStyles.button}`}
-//           >
-//           <DownloadIcon/>
-//           </div>
-//         </Tooltip.Trigger>
-//         <Tooltip.Content
-//           offset={offset}
-//           className={`${tooltipStyles.tooltip} parent-data-[open]:hidden`}
-//           placement={tooltipPlacement}
-//         >
-//           Download Episode
-//         </Tooltip.Content>
-//       </Tooltip.Root>
-//     )
-//   );
-// }
+  return (
+    nowPlaying?.download && (
+      <Tooltip.Root>
+        <Tooltip.Trigger asChild>
+          <div
+            onClick={handleDownload}
+            onTouchEnd={handleDownload}
+            className={`play-button ${buttonStyles.button}`}
+          >
+          <DownloadIcon/>
+          </div>
+        </Tooltip.Trigger>
+        <Tooltip.Content
+          offset={offset}
+          className={`${tooltipStyles.tooltip} parent-data-[open]:hidden`}
+          placement={tooltipPlacement}
+        >
+          Download Episode
+        </Tooltip.Content>
+      </Tooltip.Root>
+    )
+  );
+}
